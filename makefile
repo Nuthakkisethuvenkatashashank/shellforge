@@ -2,7 +2,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -std=c11 -Iinclude
 
-SRC = $(wildcard src/*.c)
+SRC = $(filter-out src/%_backup.c,$(wildcard src/*.c))
 
 TARGET = shellforge
 
